@@ -1,0 +1,13 @@
+@import '../shared/styles/base/mixins';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 811px;
+  margin-bottom: 48px;
+
+  @include mobile {
+    text-wrap: balance;
+  }
+}

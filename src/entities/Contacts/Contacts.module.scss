@@ -1,0 +1,25 @@
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: var(--text-btn-primary);
+  }
+
+  &__links {
+    display: flex;
+    gap: 15px;
+
+    &-title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--text-btn-primary);
+    }
+  }
+}

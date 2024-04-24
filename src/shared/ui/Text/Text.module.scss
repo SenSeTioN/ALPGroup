@@ -1,0 +1,48 @@
+@import '../../styles/base/fonts';
+
+.text {
+  &-light {
+    font-weight: map-get($font-weight, L);
+  }
+
+  &-regular {
+    font-weight: map-get($font-weight, R);
+  }
+
+  &-medium {
+    font-weight: map-get($font-weight, M);
+  }
+
+  &-semibold {
+    font-weight: map-get($font-weight, SB);
+  }
+
+  &-bold {
+    font-weight: map-get($font-weight, B);
+  }
+
+  &-xs {
+    font-size: map-get($font-size, XS);
+    line-height: map-get($line-height, XS);
+  }
+
+  &-s {
+    font-size: map-get($font-size, S);
+    line-height: map-get($line-height, S);
+  }
+
+  &-m {
+    font-size: map-get($font-size, M);
+    line-height: map-get($line-height, M);
+  }
+
+  &-ml {
+    font-size: map-get($font-size, ML);
+    line-height: map-get($line-height, ML);
+  }
+
+  &-l {
+    font-size: map-get($font-size, L);
+    line-height: map-get($line-height, L);
+  }
+}

@@ -1,0 +1,30 @@
+:root {
+  --container-width-m: 1280px;
+  --container-padding-inline-m: 28px;
+  --container-padding-inline-mobile-m: 16px;
+
+  --container-width-l: 1440px;
+  --container-padding-inline-l: 40px;
+
+  //Colors
+  --bg-main: #2c6086;
+  --bg-footer: #0d446c;
+  --bg-content: #f0f0f5;
+
+  --text-main: #000000;
+  --text-title: #0c0c0c;
+  --text-secondary: #707075;
+  --text-secondary-err: #e22045;
+
+  --text-btn-primary: #ffffff;
+  --text-btn-secondary: #e36746;
+  --text-btn-secondary-active: #e46f50;
+  --text-btn-hover-secondary: #f1b287;
+
+  --btn-bg-primary: #e46f50;
+  --btn-bg-secondary: #ffffff;
+  --btn-bg-hover-primary: #f1b287;
+
+  --border-primary: #000000;
+  --border-err: #e22045;
+}

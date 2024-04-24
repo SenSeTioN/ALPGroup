@@ -1,0 +1,56 @@
+.content {
+  max-width: 844px;
+  width: 100%;
+
+  &-title {
+    margin-bottom: 18px;
+  }
+
+  &-subtitle {
+    margin-bottom: 14px;
+    text-wrap: balance;
+    &-info {
+      margin-bottom: 32px;
+      text-wrap: balance;
+    }
+  }
+
+  &-link {
+    color: #0158ba;
+    text-decoration: underline !important;
+  }
+}
+
+.radio {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 32px;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.description {
+  max-width: 343px;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  color: var(--text-secondary);
+}
+
+.gender {
+  display: flex;
+  gap: 85px;
+  margin-bottom: 12px;
+}
+
+.select {
+  margin-bottom: 44px;
+}
+
+.checkbox {
+  margin-bottom: 39px;
+}

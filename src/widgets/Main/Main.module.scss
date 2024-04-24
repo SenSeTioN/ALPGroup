@@ -1,0 +1,17 @@
+@import '../../shared/styles/base/mixins';
+
+.main {
+  background-color: var(--btn-bg-secondary);
+
+  &__title {
+    padding-top: 40px;
+    margin-bottom: 23px;
+    font-size: clamp(28px, 1.439rem + 1.33vw, 40px);
+    line-height: clamp(32px, 1.663rem + 1.44vw, 45px);
+    color: var(--text-title);
+
+    @include mobile {
+      text-wrap: balance;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.table-wrapper {
+  max-width: 1008px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+.table {
+  border: 1px solid #0d446c !important;
+
+  &-head {
+    background-color: #0d446c;
+    color: #fff;
+    height: 71px;
+    text-align: center;
+
+    th {
+      text-align: center;
+    }
+  }
+
+  &-body {
+    td {
+      height: 71px;
+      border: 1px solid #0d446c;
+      text-align: center;
+    }
+  }
+}

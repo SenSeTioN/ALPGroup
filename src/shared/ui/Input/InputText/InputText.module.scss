@@ -1,0 +1,14 @@
+.input[type='text'] {
+  width: 386px;
+  padding: 16px 14px;
+  border: 1px solid var(--border-primary);
+  background-color: var(--btn-bg-secondary);
+
+  &::placeholder {
+    color: var(--text-secondary);
+  }
+
+  &:invalid {
+    border-color: var(--border-err);
+  }
+}

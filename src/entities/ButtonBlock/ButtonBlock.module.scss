@@ -1,0 +1,15 @@
+.btn {
+  display: flex;
+  gap: 16px;
+
+  &-container {
+    display: flex;
+    gap: 38px;
+    margin-bottom: 50px;
+  }
+
+  &-title {
+    font-size: 22px;
+    line-height: 36px;
+  }
+}
