@@ -1,7 +1,7 @@
 'use client'
 
 import cx from 'clsx'
-import { FC, useState, type ChangeEvent } from 'react'
+import { useEffect, useState, type ChangeEvent, type FC } from 'react'
 import styles from './InputText.module.scss'
 
 interface IInputProps {
@@ -9,9 +9,18 @@ interface IInputProps {
   maxLength?: number
   required?: boolean
   onChange?: (value: number) => void
+  page: number
+  textValue: { [key: string]: number }
 }
 
-export const InputText: FC<IInputProps> = ({ className, maxLength, required, onChange }) => {
+export const InputText: FC<IInputProps> = ({
+  page,
+  className,
+  maxLength,
+  required,
+  onChange,
+  textValue,
+}) => {
   const [value, setValue] = useState('')
 
   const onChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -19,19 +28,24 @@ export const InputText: FC<IInputProps> = ({ className, maxLength, required, onC
     onChange?.(+e.target.value)
   }
 
+  useEffect(() => {
+    setValue('')
+  }, [page])
+
+  console.log('value InputText', value)
+
   return (
     <div className={styles.container}>
       <input
-        value={value}
+        value={textValue[page] ? textValue[page] : value}
         type='text'
         className={cx(styles.input, className)}
         maxLength={maxLength}
         onChange={onChangeInput}
         placeholder='Введите данные'
         required={required}
+        name={`text-${page}`}
       />
     </div>
   )
 }
-
-InputText.displayName = 'InputText'

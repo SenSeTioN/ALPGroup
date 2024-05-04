@@ -1,20 +1,21 @@
 'use client'
 
 import { Input, Text } from '@/shared'
-import Link from 'next/link'
-import type { FC } from 'react'
-import styles from './Question.module.scss'
 import type { IQuestion } from '@/widgets/QuestionWidget/lib/types'
+import Link from 'next/link'
+import { type FC } from 'react'
+import styles from './Question.module.scss'
 
 type TQuestionProps = {
   page: number
-  onChange: (value: number) => void
+  inputHandler: (value: number) => void
   questions: IQuestion[]
+  textValue: { [key: string]: number }
 }
 
-export const Question: FC<TQuestionProps> = ({ page, onChange, questions }) => {
+export const Question: FC<TQuestionProps> = ({ page, inputHandler, questions, textValue }) => {
   return (
-    <form className={styles.content}>
+    <div className={styles.content}>
       <Text tag='h2' size='m' weight='bold' className={styles['content-title']}>
         {`Вопрос ${page + 1}/${questions.length}`}
       </Text>
@@ -40,8 +41,7 @@ export const Question: FC<TQuestionProps> = ({ page, onChange, questions }) => {
 
       {questions[page].input === 'text' && (
         <>
-          <Input.Text onChange={onChange} maxLength={2} />
-
+          <Input.Text onChange={inputHandler} maxLength={2} textValue={textValue} page={page} />
           <Text tag='p' size='xs' weight='regular' className={styles.description}>
             {questions[page].description}
           </Text>
@@ -69,7 +69,7 @@ export const Question: FC<TQuestionProps> = ({ page, onChange, questions }) => {
                 name='group-1'
                 value={item.score}
                 labelText={item.title}
-                onChange={onChange}
+                onChange={inputHandler}
               />
             ))}
           </div>
@@ -84,7 +84,7 @@ export const Question: FC<TQuestionProps> = ({ page, onChange, questions }) => {
                   name='group-1'
                   value={item.score}
                   labelText={item.title}
-                  onChange={onChange}
+                  onChange={inputHandler}
                 />
               ))}
             </div>
@@ -102,7 +102,7 @@ export const Question: FC<TQuestionProps> = ({ page, onChange, questions }) => {
 
       {questions[page].input === 'select' && (
         <div className={styles.select}>
-          <Input.Select onChange={onChange} options={questions[page].selections} />
+          <Input.Select onChange={inputHandler} options={questions[page].selections} />
         </div>
       )}
 
@@ -116,11 +116,11 @@ export const Question: FC<TQuestionProps> = ({ page, onChange, questions }) => {
               name='group-2'
               value={item.score}
               labelText={item.title}
-              onChange={onChange}
+              onChange={inputHandler}
             />
           ))}
         </div>
       )}
-    </form>
+    </div>
   )
 }

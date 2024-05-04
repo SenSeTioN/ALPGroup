@@ -53,7 +53,7 @@ export const ButtonBlock: FC<TButtonBlockProps> = ({ page, theme, next, prev, re
 
           {page === 7 ? (
             <Link href='/result'>
-              <Button theme='primary' width='standard' className={styles.btn}>
+              <Button theme='primary' width='standard' className={styles.btn} onClick={next}>
                 <Text tag='span' size='ml' weight='bold'>
                   Далее
                 </Text>
