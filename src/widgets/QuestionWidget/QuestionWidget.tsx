@@ -20,7 +20,12 @@ export const QuestionWidget = () => {
       <div className={styles.wrapper}>
         <Question page={page} inputHandler={inputHandler} questions={questions} textValue={value} />
 
-        <ButtonBlock disabled={!value[page]} page={page} value={value} theme='questionsPage' />
+        <ButtonBlock
+          disabled={value[page] === undefined}
+          page={page}
+          value={value}
+          theme='questionsPage'
+        />
       </div>
     </Content>
   )

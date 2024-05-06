@@ -5,6 +5,7 @@ import type { IQuestion } from '@/widgets/QuestionWidget/lib/types'
 import Link from 'next/link'
 import { type FC } from 'react'
 import styles from './Question.module.scss'
+import cx from 'clsx'
 
 type TQuestionProps = {
   page: number
@@ -90,7 +91,10 @@ export const Question: FC<TQuestionProps> = ({ page, inputHandler, questions, te
             </div>
           )}
 
-          <div className={styles['points']}>
+          <div
+            className={cx(styles['points'], {
+              [styles[`group-2`]]: questions[page]?.variants?.groupTwo,
+            })}>
             {questions[page]?.variants?.points.map((item) => (
               <Text key={item.id} tag='p' size='s' weight='regular'>
                 {item.title}
@@ -110,6 +114,7 @@ export const Question: FC<TQuestionProps> = ({ page, inputHandler, questions, te
         <div className={styles.checkbox}>
           {questions[page]?.variants?.groupOne.map((item, i) => (
             <Input.Checkbox
+              page={page}
               key={item.id}
               id={item.id}
               type='radio'

@@ -1,15 +1,37 @@
+@import '../../shared/styles/base/mixins';
+
 .btn {
   display: flex;
   gap: 16px;
+
+  @include mobile() {
+    gap: 8px;
+  }
+
+  &-next {
+    width: 100%;
+
+    @include mobile() {
+      order: -1;
+    }
+  }
+
+  &-back {
+    width: 100%;
+  }
 
   &-container {
     display: flex;
     gap: 38px;
     margin-bottom: 50px;
+
+    @include mobile() {
+      flex-direction: column;
+    }
   }
 
   &-title {
-    font-size: 22px;
-    line-height: 36px;
+    font-size: clamp(14px, 11px + 0.88vw, 22px);
+    line-height: clamp(20px, 13px + 1.76vw, 36px);
   }
 }

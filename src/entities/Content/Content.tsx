@@ -15,7 +15,13 @@ export const Content: FC<TContentProps> = ({ children, image }) => {
     <div className={styles.content}>
       {children}
       <div className={styles['content-img']}>
-        <Image src={image.src} alt={image.alt} width={284} height={282} />
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={284}
+          height={282}
+          style={{ objectFit: 'cover' }}
+        />
       </div>
     </div>
   )

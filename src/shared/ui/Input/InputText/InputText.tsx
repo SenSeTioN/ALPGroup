@@ -33,17 +33,15 @@ export const InputText: FC<IInputProps> = ({
   }, [page])
 
   return (
-    <div className={styles.container}>
-      <input
-        value={textValue[page] ? textValue[page] : value}
-        type='text'
-        className={cx(styles.input, className)}
-        maxLength={maxLength}
-        onChange={onChangeInput}
-        placeholder='Введите данные'
-        required={required}
-        name={`text-${page}`}
-      />
-    </div>
+    <input
+      value={textValue[page] ? textValue[page] : value}
+      type='text'
+      className={cx(styles.input, className)}
+      maxLength={maxLength}
+      onChange={onChangeInput}
+      placeholder='Введите данные'
+      required={required}
+      name={`text-${page}`}
+    />
   )
 }

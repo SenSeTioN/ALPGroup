@@ -1,3 +1,5 @@
+@import '../../shared/styles/base/mixins';
+
 .content {
   max-width: 844px;
   width: 100%;
@@ -31,6 +33,12 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.group-2 {
+  @include mobile() {
+    display: none;
+  }
 }
 
 .description {
