@@ -1,5 +1,4 @@
 export * from './Contacts'
 export * from './Content'
 export * from './Politics'
-export * from './ButtonBlock'
 export * from './Metrics'

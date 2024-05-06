@@ -7,15 +7,18 @@
   transition: all 0.2s ease-in;
 
   &-standard {
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
   }
 
   &-medium {
-    width: 293px;
+    max-width: 293px;
+    width: 100%;
   }
 
   &-large {
-    width: 457px;
+    max-width: 457px;
+    width: 100%;
   }
 
   &-primary {

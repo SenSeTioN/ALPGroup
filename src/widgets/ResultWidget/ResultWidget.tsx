@@ -1,16 +1,14 @@
 'use client'
 
-import { ButtonBlock, Content } from '@/entities'
+import { Content } from '@/entities'
+import { ButtonBlock } from '@/features'
 import { Text, useQuestionsStore } from '@/shared'
 import styles from './ResultWidget.module.scss'
 import { getResult } from './lib/utils/getResult'
 
 export const ResultWidget = () => {
   const answer = useQuestionsStore((state) => state.answer)
-  const reset = useQuestionsStore((state) => state.reset)
   const result = getResult(answer)
-
-  console.log('result', answer)
 
   return (
     <Content image={result.image}>
@@ -27,7 +25,7 @@ export const ResultWidget = () => {
           {result.description}
         </Text>
 
-        <ButtonBlock theme='resultPage' reset={reset} />
+        <ButtonBlock theme='resultPage' />
       </div>
     </Content>
   )

@@ -32,8 +32,6 @@ export const InputText: FC<IInputProps> = ({
     setValue('')
   }, [page])
 
-  console.log('value InputText', value)
-
   return (
     <div className={styles.container}>
       <input
