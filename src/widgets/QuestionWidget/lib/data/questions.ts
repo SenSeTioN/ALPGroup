@@ -143,12 +143,12 @@ export const questions: IQuestion[] = [
     variants: {
       groupOne: [
         {
-          id: '1',
+          id: '3',
           title: 'Да',
           score: 2,
         },
         {
-          id: '2',
+          id: '4',
           title: 'Нет',
           score: 0,
         },
@@ -176,12 +176,12 @@ export const questions: IQuestion[] = [
     variants: {
       groupOne: [
         {
-          id: '1',
+          id: '5',
           title: 'Нет',
           score: 0,
         },
         {
-          id: '2',
+          id: '6',
           title: 'Да',
           score: 1,
         },
@@ -209,17 +209,17 @@ export const questions: IQuestion[] = [
     variants: {
       groupOne: [
         {
-          id: '1',
+          id: '7',
           title: 'Нет',
           score: 0,
         },
         {
-          id: '2',
+          id: '8',
           title: 'Да: дедушка/бабушка, тетя/дядя, двоюродные братья, сестры',
           score: 3,
         },
         {
-          id: '3',
+          id: '9',
           title: 'Да: родители, брат/сестра или собственный ребенок',
           score: 5,
         },

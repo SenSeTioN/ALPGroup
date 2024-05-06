@@ -2,10 +2,10 @@
 
 import { Input, Text } from '@/shared'
 import type { IQuestion } from '@/widgets/QuestionWidget/lib/types'
+import cx from 'clsx'
 import Link from 'next/link'
 import { type FC } from 'react'
 import styles from './Question.module.scss'
-import cx from 'clsx'
 
 type TQuestionProps = {
   page: number
