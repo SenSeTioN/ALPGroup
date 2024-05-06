@@ -1,11 +1,51 @@
+@import '../../shared/styles/base/mixins';
+
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 600px));
   gap: 34px;
+
+  @include mobile() {
+    grid-template-columns: 1fr;
+  }
 }
 
 .metrics {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
+
+  @include mobile() {
+    display: block;
+  }
+
+  &-icon-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 120px;
+    width: 100%;
+    gap: 8px;
+
+    @include mobile() {
+      flex-direction: row;
+      justify-content: flex-start;
+      max-width: 200px;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .subtitle {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 800;
+    color: #6c76bc;
+  }
+
+  &-content {
+    max-width: 480px;
+    width: 100%;
+  }
 }

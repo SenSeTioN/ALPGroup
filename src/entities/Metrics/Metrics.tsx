@@ -8,10 +8,17 @@ export const Metrics = () => {
     <div className={styles.wrapper}>
       {METRICS.map((item) => (
         <div key={item.id} className={styles.metrics}>
-          <Image src={item.icon.src} alt={item.icon.alt} width={70} height={115} />
-          <Text tag='p' size='s' weight='regular' className={styles['metrics__text']}>
-            {item.title}
-          </Text>
+          <div className={styles['metrics-icon-block']}>
+            <Image src={item.icon.src} alt={item.icon.alt} width={80} height={80} />
+            <Text tag='p' className={styles.subtitle}>
+              {item.subtitle}
+            </Text>
+          </div>
+          <div className={styles['metrics-content']}>
+            <Text tag='p' size='s' weight='regular'>
+              {item.title}
+            </Text>
+          </div>
         </div>
       ))}
     </div>
