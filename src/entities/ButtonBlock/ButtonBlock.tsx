@@ -8,13 +8,21 @@ import styles from './ButtonBlock.module.scss'
 
 type TButtonBlockProps = {
   theme: 'questionsPage' | 'resultPage'
+  disabled?: boolean
   page?: number
   next?: () => void
   prev?: () => void
   reset?: () => void
 }
 
-export const ButtonBlock: FC<TButtonBlockProps> = ({ page, theme, next, prev, reset }) => {
+export const ButtonBlock: FC<TButtonBlockProps> = ({
+  page,
+  theme,
+  next,
+  prev,
+  reset,
+  disabled,
+}) => {
   return (
     <div className={styles['btn-container']}>
       {theme === 'questionsPage' && (
@@ -53,7 +61,12 @@ export const ButtonBlock: FC<TButtonBlockProps> = ({ page, theme, next, prev, re
 
           {page === 7 ? (
             <Link href='/result'>
-              <Button theme='primary' width='standard' className={styles.btn} onClick={next}>
+              <Button
+                theme='primary'
+                width='standard'
+                className={styles.btn}
+                onClick={next}
+                disabled={disabled}>
                 <Text tag='span' size='ml' weight='bold'>
                   Далее
                 </Text>
@@ -68,7 +81,12 @@ export const ButtonBlock: FC<TButtonBlockProps> = ({ page, theme, next, prev, re
               </Button>
             </Link>
           ) : (
-            <Button theme='primary' width='standard' onClick={next} className={styles.btn}>
+            <Button
+              theme='primary'
+              width='standard'
+              onClick={next}
+              className={styles.btn}
+              disabled={disabled}>
               <Text tag='span' size='ml' weight='bold'>
                 Далее
               </Text>

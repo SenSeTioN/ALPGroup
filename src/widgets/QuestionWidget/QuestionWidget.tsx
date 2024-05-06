@@ -25,6 +25,7 @@ export const QuestionWidget = () => {
         <Question page={page} inputHandler={inputHandler} questions={questions} textValue={value} />
 
         <ButtonBlock
+          disabled={!value[page]}
           page={page}
           theme='questionsPage'
           next={page === 7 ? () => setAnswer(value) : () => incrementPage()}
